@@ -55,10 +55,10 @@ jobs:
         - name: install dependencies
           run: npm ci
         - name: upload artifact
-          uses: actions/upload-pages-artifact@v4
+          uses: actions/upload-pages-artifact@v3
           with:
             name: dist-files
-            path: . 
+            path: dist
 
   deploy:
     needs: build

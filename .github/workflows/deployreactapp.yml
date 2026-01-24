@@ -54,6 +54,8 @@ jobs:
              key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}    
         - name: install dependencies
           run: npm ci
+        - name: Build Project
+          run: npm run build  
         - name: upload artifact
           uses: actions/upload-pages-artifact@v3
           with:
